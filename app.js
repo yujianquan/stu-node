@@ -10,9 +10,9 @@ var admin = require('./routes/admin/index')
 var app = express();
 
 // view engine setup
-app.engine('html',require('express-art-template'))
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
+// app.engine('html',require('express-art-template'))
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'html');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -52,7 +52,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  createError(500)
 });
 
 module.exports = app;

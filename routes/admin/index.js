@@ -3,7 +3,7 @@ var router = express.Router();
 var db = require('../../config/db')
 
 router.get('/',(req,res,next) => {
-    res.render('admin/index.html',{title:"nihao"})
+    res.send('admin/index.html')
 })
 
 router.get('/adminIndex', (req, res, next) => {
