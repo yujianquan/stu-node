@@ -1,0 +1,28 @@
+<div>I'm {{title}}</div>
+<script type="text/javascript">
+function factorial(n,total = 1) {
+  if (n === 1) return total;
+  return factorial(n - 1, n * total);
+}
+
+function Fibonacci (n) {
+  if ( n <= 1 ) {return 1};
+  return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+
+function add(x,y){
+  return x+y;
+}
+console.log(add(...[2,3,5]))
+
+let arrayLike = {
+  '0': 'a',
+  '1': 'b',
+  '2': 'c',
+  length: 3,
+  '3':'d'
+};
+
+let array = Array.from(arrayLike);
+console.log(array)
+</script>
